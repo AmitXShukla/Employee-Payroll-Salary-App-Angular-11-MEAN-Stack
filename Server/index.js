@@ -40,7 +40,7 @@ app.use(cors({
 // bind express with graphql
 app.use('/graphql', graphqlHTTP({
     schema,
-    graphiql: true
+    graphiql: false
 }));
 app.use('/', (req, res) => res.send("Welcome ElishERP User"));
 app.listen(process.env.GRAPHQLPORT, () => console.log('Elish Enterprise Server is ready on localhost:' + process.env.GRAPHQLPORT));
