@@ -1,0 +1,57 @@
+<header pageTitle="Settings" imageUrl="account_circle" helpType="settingspage"></header>
+<mat-card [@fallIn]='state' *ngIf="!savedChanges else showSavedChangesCard">
+  <form #formData='ngForm'>
+    <mat-card-content>
+      <mat-card-title>
+        <span class="small-headline">Update Settings</span>
+      </mat-card-title>
+      <mat-progress-bar mode="indeterminate" *ngIf="dataLoading"></mat-progress-bar>
+      <mat-error *ngIf="error">Your Authentication is invalid, please logout and log in again. Error: {{ errorMessage }}</mat-error>
+      <mat-card-actions align="start">
+        <button type="button" (click)="onSubmit(formData.value);" [disabled]="!formData.valid" mat-raised-button color="primary">Update</button>
+        <button type="button" (click)="getUser()" mat-raised-button color="primary">Refresh</button>
+        <button type="button" [routerLink]="['/login']" mat-raised-button color="primary">Logout</button>
+      </mat-card-actions>
+      <mat-form-field class="example-form">
+        <input matInput placeholder="name" name="name" #name="ngModel" [ngModel]="this.data?.name" ngModel required minlength="5" maxlength="30">
+      </mat-form-field>
+      <span *ngIf="name.invalid && (name.dirty || name.touched)">
+        <mat-error *ngIf="name.errors['required']">Name is Required.</mat-error>
+        <mat-error *ngIf="name.errors['minlength']">Name can't be less than 5 characters.</mat-error>
+        <mat-error *ngIf="name.errors['maxlength']">Name can't be more than 30 characters.</mat-error>
+      </span>
+      <br />
+      <mat-form-field class="example-form">
+        <input matInput readonly placeholder="email" name="email" #email="ngModel" [ngModel]="this.data?.email" required email>
+      </mat-form-field>
+      <br />
+      <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">Please enter a valid email.</mat-error>
+      <mat-form-field class="example-form">
+        <input matInput type="password" placeholder="Choose app password" name="password" #password="ngModel" ngModel required minlength="5"
+          maxlength="30">
+      </mat-form-field>
+      <span *ngIf="password.invalid && (password.dirty || password.touched)">
+        <mat-error *ngIf="password.errors['required']">Password is Required.</mat-error>
+        <mat-error *ngIf="password.errors['minlength']">Password can't be less than 5 characters.</mat-error>
+        <mat-error *ngIf="password.errors['maxlength']">Password can't be more than 30 characters.</mat-error>
+      </span>
+    </mat-card-content>
+  </form>
+</mat-card>
+<ng-template #showSavedChangesCard>
+  <br>
+  <br>
+  <br>
+  <br>
+  <mat-error>
+    Your data is updated. Please log back in with your email and password.
+  </mat-error>
+  <br>
+  <br>
+  <br>
+  <br>
+  <mat-card-actions align="start">
+    <button type="button" (click)="savedChanges=false;routeLoginPage();" mat-raised-button color="primary">Close</button>
+  </mat-card-actions>
+</ng-template>
+<footer></footer>
