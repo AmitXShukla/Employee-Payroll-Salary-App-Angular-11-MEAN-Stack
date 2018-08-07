@@ -28,7 +28,7 @@
   </mat-card-content>
 </mat-card>
 <!-- addMode -->
-<ng-template #showAddMode>{{ addDataForm.value | json }}
+<ng-template #showAddMode>
   <form [formGroup]="addDataForm" (ngSubmit)="setData(addDataForm.value);this.addDataForm.reset();" novalidate>
     <mat-error *ngIf="savedChanges">
       Data is saved.
