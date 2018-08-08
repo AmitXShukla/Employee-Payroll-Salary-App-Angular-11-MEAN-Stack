@@ -501,7 +501,7 @@ export class BackendService {
         "descr": formData.descr
       }
     }
-    return this._http.post('http://localhost:3000/graphql', graphqlQuery, httpOptions);
+    return this._http.post('http://localhost:3000/alivetracking', graphqlQuery, httpOptions);
   }
 
   setSalaryVoucher(input) {

@@ -1,7 +1,11 @@
 <mat-toolbar color="primary">
+  <!---
+    <button mat-mini-fab color="warn">
+        <mat-icon svgIcon="menu"></mat-icon>
+      </button>
   <button mat-mini-fab color="warn" [matMenuTriggerFor]="rootMenu">
     <mat-icon svgIcon="menu"></mat-icon>
-  </button>
+  </button>-->
   <mat-menu #rootMenu="matMenu">
     <button mat-menu-item routerLink="/aboutus"><mat-icon svgIcon="dashboard-black" color="primary"></mat-icon>Home</button>
     <button mat-menu-item [matMenuTriggerFor]="emplMenu"><mat-icon svgIcon="star" color="primary"></mat-icon>Manage</button>

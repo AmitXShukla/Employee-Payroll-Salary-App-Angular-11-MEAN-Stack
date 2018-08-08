@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { DashboardHeaderComponent } from './shared/header/dash.header.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -34,6 +35,7 @@ import { SalaryComponent } from './manage/salary.component';
   declarations: [
     AppComponent,
     FooterComponent,
+    DashboardHeaderComponent,
     HeaderComponent,
     AboutusComponent,
     HelpdeskComponent,

@@ -212,5 +212,8 @@ export class ElishCustomMaterialModule {
             iconRegistry.addSvgIcon(
                 'salary',
             sanitizer.bypassSecurityTrustResourceUrl('assets/icons/salary.svg'));
+            iconRegistry.addSvgIcon(
+                'drop_down',
+            sanitizer.bypassSecurityTrustResourceUrl('assets/icons/drop_down.svg'));
       }
 }
