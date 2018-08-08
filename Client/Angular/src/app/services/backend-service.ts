@@ -10,7 +10,7 @@ import 'rxjs/add/observable/of';
 
 export class BackendService {
 
-  private _graphQLURL = "http://localhost:3000/graphql";
+  private _graphQLURL = "http://localhost:3000/alivetracking";
 
   constructor(private _http: HttpClient) { }
 
@@ -90,7 +90,7 @@ export class BackendService {
         "descr": formData.descr
       }
     };
-    return this._http.post('http://localhost:3000/graphql', graphqlQuery, httpOptions);
+    return this._http.post(this._graphQLURL, graphqlQuery, httpOptions);
   }
 
   setJobCode(input) {
@@ -153,7 +153,7 @@ export class BackendService {
         "descr": formData.descr
       }
     };
-    return this._http.post('http://localhost:3000/graphql', graphqlQuery, httpOptions);
+    return this._http.post(this._graphQLURL, graphqlQuery, httpOptions);
   }
 
   setLeaveCode(input) {
@@ -207,7 +207,7 @@ export class BackendService {
         "descr": formData.descr
       }
     }
-    return this._http.post('http://localhost:3000/graphql', graphqlQuery, httpOptions);
+    return this._http.post(this._graphQLURL, graphqlQuery, httpOptions);
   }
 
   setSalaryCode(input) {
@@ -267,7 +267,7 @@ export class BackendService {
         "DESCR": formData.DESCR
       }
     }
-    return this._http.post('http://localhost:3000/graphql', graphqlQuery, httpOptions);
+    return this._http.post(this._graphQLURL, graphqlQuery, httpOptions);
   }
 
   setVoucher(input) {
@@ -371,7 +371,7 @@ export class BackendService {
         "DESCR": formData.DESCR
       }
     }
-    return this._http.post('http://localhost:3000/graphql', graphqlQuery, httpOptions);
+    return this._http.post(this._graphQLURL, graphqlQuery, httpOptions);
   }
 
   setEmployee(input) {
@@ -501,7 +501,7 @@ export class BackendService {
         "descr": formData.descr
       }
     }
-    return this._http.post('http://localhost:3000/alivetracking', graphqlQuery, httpOptions);
+    return this._http.post(this._graphQLURL, graphqlQuery, httpOptions);
   }
 
   setSalaryVoucher(input) {
