@@ -1,10 +1,10 @@
 export const environment = {
   production: true,
-  emailAPI: 'http://elisheducation.com/contact-form-ecrm.php',
+  emailAPI: 'http://XXXXXX.com/contact-form.php',
   database: 'graphql' ,
   social: {
     fblink: 'https://www.facebook.com/elishconsulting',
-    linkedin: 'https://www.linkedin.com/in/ashuklax/',
+    linkedin: 'YYYYYYYY',
     github: 'https://github.com/AmitXShukla',
     emailid: 'info@elishconsulting.com'
   },
