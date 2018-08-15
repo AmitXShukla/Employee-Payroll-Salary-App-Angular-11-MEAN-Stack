@@ -1,5 +1,5 @@
 <h2><u>Install NodeJS, Express and GraphQL Middleware</u></h2>
-<a href="https://youtu.be/_ucAQguh8BQ" target="_blank">YouTube Video Tutorial</a><br/><br/>
+<a href="https://youtu.be/sWOXETusJNw" target="_blank">YouTube Video Tutorial</a><br/><br/>
 <h4>Let's get started:</h4>
 <a href="https://nodejs.org/en/">Install nodejs</a><br />
 $ node -v  // check node version, if this doesn't return node version, please fix and re-install (or update your %PATH%)<br />

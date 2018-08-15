@@ -1,5 +1,5 @@
 <h2><u>Access GraphQL Middleware using Angular 6.1.0</u></h2>
-<a href="https://youtu.be/_ucAQguh8BQ" target="_blank">YouTube Video Tutorial</a><br/><br/>
+<a href="https://youtu.be/sWOXETusJNw" target="_blank">YouTube Video Tutorial</a><br/><br/>
 <a href="https://github.com/AmitXShukla/GraphQL-Middleware-JWTAUTH-Authorization">Link to GraphQL API</a><br />
 In our last blog, We have setup Middleware and MongoDB/MYSQL database.<br />
 In this repo, I will use Angular 6 and Angular Material framework to access GraphQL API to connect to MongoDB and MYSQL.<br />

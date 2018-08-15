@@ -1,5 +1,5 @@
 <u><h2>Database Installation</h2></u>
-<a href="https://youtu.be/_ucAQguh8BQ" target="_blank">YouTube Video Tutorial</a><br/><br/>
+<a href="https://youtu.be/sWOXETusJNw" target="_blank">YouTube Video Tutorial</a><br/><br/>
 By dafault, Elish HCM Cloud Community Edition is bundled with MongoDB.<br>
 <i>please note that MongoDB is my preferred choice, but Developer may choose any database like MYSQL, MS SQL Server or CouchDB, Google Firebase/Firestore or any REST API</i><br />
 Other database supported on v1.1.8 release are
