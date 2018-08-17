@@ -8,8 +8,8 @@ schema = require('./schema/mongoDBSchema'); // uncomment this for MONGODB
 //schema = require('./schema/mysqlDBSchema'); // uncomment this for MYSQL // MYSQL version is not WORKING yet, will update in near future release v1.1.9
 
 // ****** Set up default mongoose connection START ****** //
-const mongoose = require('mongoose');
-//var mongoDB = process.env.mongoDBMLABURL; // cloud hosted MongoDB
+//const mongoose = require('mongoose');
+var mongoDB = process.env.mongoDBMLABURL; // cloud hosted MongoDB
 var mongoDB = process.env.mongoDBLocalURL; // locally hosted MongoDB
 mongoose.connect(mongoDB);
 
