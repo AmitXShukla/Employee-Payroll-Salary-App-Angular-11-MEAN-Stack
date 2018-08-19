@@ -8,9 +8,9 @@ schema = require('./schema/mongoDBSchema'); // uncomment this for MONGODB
 //schema = require('./schema/mysqlDBSchema'); // uncomment this for MYSQL // MYSQL version is not WORKING yet, will update in near future release v1.1.9
 
 // ****** Set up default mongoose connection START ****** //
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 var mongoDB = process.env.mongoDBMLABURL; // cloud hosted MongoDB
-var mongoDB = process.env.mongoDBLocalURL; // locally hosted MongoDB
+//var mongoDB = process.env.mongoDBLocalURL; // locally hosted MongoDB
 mongoose.connect(mongoDB);
 
 mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -47,4 +47,4 @@ app.use('/alivetracking', graphqlHTTP({
     graphiql: false
 }));
 app.use('/', (req, res) => res.send("Welcome ElishERP User"));
-app.listen(process.env.GRAPHQLPORT, () => console.log('Elish Enterprise Server is ready on localhost:' + process.env.GRAPHQLPORT));
+app.listen(process.env.PORT, () => console.log('Elish Enterprise Server is ready on localhost:' + process.env.GRAPHQLPORT));
