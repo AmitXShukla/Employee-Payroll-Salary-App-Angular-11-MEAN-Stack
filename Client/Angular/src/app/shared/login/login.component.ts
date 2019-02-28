@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { moveIn, fallIn } from '../router.animations';
 import { environment } from '../../../environments/environment';
 import { BackendService } from '../../services/backend-service';
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'login',
