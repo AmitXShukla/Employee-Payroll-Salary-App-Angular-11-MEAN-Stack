@@ -1,4 +1,5 @@
 <h2><u>Employee Payroll/Salary Management App</u></h2>
+<h4><font color="blue">This repository is updated to Angular 7 Now.</font></h4>
 <a href="https://youtu.be/sWOXETusJNw" target="_blank">YouTube Video Tutorial !! </a>
 <br/>
 <b>Objective: </b> This document serves as an Installation Guide for Elish HCM Cloud free commmunity version Desktop/Mobile App.<br><br>
