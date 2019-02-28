@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { moveIn, fallIn } from '../shared/router.animations';
 import { BackendService } from '../services/backend-service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'settings',
