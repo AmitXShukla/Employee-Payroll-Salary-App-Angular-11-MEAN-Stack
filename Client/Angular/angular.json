@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AliveTracking": {
+    "SMS": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AliveTracking",
+            "outputPath": "dist/SMS",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,8 @@
             "styles": [
               "src/assets/css/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -43,25 +44,32 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AliveTracking:build"
+            "browserTarget": "SMS:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AliveTracking:build:production"
+              "browserTarget": "SMS:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AliveTracking:build"
+            "browserTarget": "SMS:build"
           }
         },
         "test": {
@@ -72,7 +80,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [
@@ -95,110 +103,21 @@
         }
       }
     },
-    "PAYROLL": {
-      "root": "ElishMaster",
-      "sourceRoot": "src_PAYROLL",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/ElishMaster",
-            "index": "src_PAYROLL/index.html",
-            "main": "src_PAYROLL/main.ts",
-            "polyfills": "src_PAYROLL/polyfills.ts",
-            "tsConfig": "src_PAYROLL/tsconfig.app.json",
-            "assets": [
-              "src_PAYROLL/assets/icons/favicon.ico",
-              "src_PAYROLL/assets"
-            ],
-            "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
-              "src_PAYROLL/assets/css/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src_PAYROLL/environments/environment.ts",
-                  "with": "src_PAYROLL/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "PAYROLL:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "PAYROLL:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "PAYROLL:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src_PAYROLL/test.ts",
-            "polyfills": "src_PAYROLL/polyfills.ts",
-            "tsConfig": "src_PAYROLL/tsconfig.spec.json",
-            "karmaConfig": "src_PAYROLL/karma.conf.js",
-            "styles": [
-              "styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "src_PAYROLL/favicon.ico",
-              "src_PAYROLL/assets"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src_PAYROLL/tsconfig.app.json",
-              "src_PAYROLL/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "ElishMaster-e2e": {
+    "SMS-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ElishMaster:serve"
+            "devServerTarget": "SMS:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "SMS:serve:production"
+            }
           }
         },
         "lint": {
@@ -213,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "AliveTracking"
+  "defaultProject": "SMS"
 }

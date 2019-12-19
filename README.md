@@ -1,10 +1,9 @@
 <h2><u>Employee Payroll/Salary Management App</u></h2>
-<h4><font color="blue">This repository is updated to Angular 7 Now.</font></h4>
-<b><u><font color="red" size = "+1">This repo is due upgrade to Angular 8 and will be updated to newer version Aug 7, 2019</font></u></b>
+<h4><font color="blue">This repository is updated to Angular 9.0 Now.</font></h4>
 <a href="https://youtu.be/sWOXETusJNw" target="_blank">YouTube Video Tutorial !! </a>
 <br/>
 <b>Objective: </b> This document serves as an Installation Guide for Elish HCM Cloud free commmunity version Desktop/Mobile App.<br><br>
-<b>Tools: </b> MEAN Stack (latest) Angular 6.1, NodeJS 10.8, Express, GraphQL and MongoDB 4.0 or MYSQL<br/>
+<b>Tools: </b> MEAN Stack (latest) Angular 9.0, NodeJS 10.8, Express, GraphQL and MongoDB 4.0 or MYSQL<br/>
 Using this design pattern, any old client/server software (like VB/SQL or JAVA/Oracle) can be converted to new design to replace or run in parallel with original software.<br/>
 You can easliy deploy this as an exe desktop app, host it over premises or over cloud or create an Android & iOS mobile app easily.
 This design pattern is built for Big Data technologies and supports millions of transactions.<br/>
