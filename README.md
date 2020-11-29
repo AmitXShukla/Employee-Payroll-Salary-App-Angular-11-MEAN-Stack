@@ -7,7 +7,9 @@
 [<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/twitter_1.svg" width=40 height=50>](https://twitter.com/ashuklax)
 
 <h2><u>Employee Payroll/Salary Management App</u></h2>
-<h4><font color="blue">This repository is updated to Angular 9.0 Now.</font></h4>
+<h4><font color="blue">This repository is updated to Angular 11.0 Now.</font></h4>
+Please install latest Angular 11 cli before starting this project, in case of any issue, please open a GitHub Issue and include detail error screenshots.
+
 <a href="https://youtu.be/sWOXETusJNw" target="_blank">YouTube Video Tutorial !! </a>
 <br/>
 <b>Objective: </b> This document serves as an Installation Guide for Elish HCM Cloud free commmunity version Desktop/Mobile App.<br><br>

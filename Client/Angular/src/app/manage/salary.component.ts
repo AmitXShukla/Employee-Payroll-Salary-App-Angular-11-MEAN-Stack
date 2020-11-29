@@ -2,10 +2,14 @@ import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { moveIn, fallIn } from '../shared/router.animations';
 import { Observable } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+// import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { BackendService } from '../services/backend-service';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
     selector: 'salary',
@@ -281,11 +285,19 @@ export class SalaryComponent implements OnInit, OnDestroy {
         this.dataSource.sort = this.sort;
     }
 
-    applyFilter(filterValue: string) {
-        filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-        this.dataSource.filter = filterValue;
-    }
+    // applyFilter(filterValue: string) {
+    //     filterValue = filterValue.trim(); // Remove whitespace
+    //     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    //     this.dataSource.filter = filterValue;
+    // }
+    applyFilter(event: Event) {
+        const filterValue = (event.target as HTMLInputElement).value;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    
+        if (this.dataSource.paginator) {
+          this.dataSource.paginator.firstPage();
+        }
+      }
     ngOnDestroy() {
         // this is not needed when observable is used, in this case, we are registering user on subscription
         if (this.querySubscription) {

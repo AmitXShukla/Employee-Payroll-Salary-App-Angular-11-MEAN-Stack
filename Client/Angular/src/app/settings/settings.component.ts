@@ -16,7 +16,8 @@ export class SettingsComponent implements OnInit, OnDestroy {
   error: boolean = false;
   errorMessage: String = "";
   dataLoading: boolean = false;
-  data: Observable<any>;
+  // data: Observable<any>;
+  data: any;
   private querySubscription;
 
   constructor(private _backendService: BackendService, private router: Router) {

@@ -68,7 +68,7 @@
           minlength="3" maxlength="30">
       </mat-form-field>
       <span *ngIf="name.invalid && (name.dirty || name.touched)">
-      <mat-error *ngIf="name.errors['required']">Name is required.</mat-error>
+      <mat-error *ngIf="name?.errors['required']">Name is required.</mat-error>
       <mat-error *ngIf="name.errors['minlength']">Name should be minimum 3 Characters.</mat-error>
       <mat-error *ngIf="name.errors['maxlength']">Name should be maximum 30 Characters.</mat-error>
       </span>

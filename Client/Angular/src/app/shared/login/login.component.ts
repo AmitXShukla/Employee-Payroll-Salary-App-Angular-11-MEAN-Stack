@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit, OnDestroy  {
   user: boolean = false;
   data: Observable<any>;
   private querySubscription;
+  state = "";
 
   constructor(private _router: Router, private _backendService: BackendService) { }
 
